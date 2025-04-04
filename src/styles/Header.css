@@ -1,0 +1,40 @@
+/* Стили для иконки главной страницы */
+.home-icon {
+    font-size: 1.8rem;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .home-icon:hover {
+    transform: scale(1.2);
+    color: #f8b400;
+  }
+  
+  /* Стили для анимации ссылок */
+  .animated-link {
+    color: white !important;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .animated-link:hover {
+    color: #f8b400 !important;
+  }
+  
+  /* Подчеркивание при наведении */
+  .animated-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f8b400;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+  }
+  
+  .animated-link:hover::after {
+    width: 100%;
+  }
+  

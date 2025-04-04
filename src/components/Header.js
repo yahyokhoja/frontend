@@ -1,50 +1,35 @@
-// src/components/Header.js
 import React from 'react';
-import { Navbar, Nav, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaSignInAlt, FaUserPlus, FaHamburger } from 'react-icons/fa'; // Импортируем иконки
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { FaHome } from 'react-icons/fa'; // Импорт иконки
 
 function Header() {
   return (
-    <Navbar bg="dark" variant="dark">
-      {/* Навигационная панель */}
-      <Nav className="ml-auto">
-        {/* Иконка и кнопка для Админки */}
-        <Nav.Item>
-          <Link to="/admin">
-            <Button variant="outline-light" className="mr-2">
-              <FaHamburger className="mr-2" /> Админка
-            </Button>
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand>
+          <Link to="/" className="home-icon">
+            <FaHome />
           </Link>
-        </Nav.Item>
-        
-        {/* Иконка и кнопка для Авторизации */}
-        <Nav.Item>
-          <Link to="/login">
-            <Button variant="outline-light" className="mr-2">
-              <FaSignInAlt className="mr-2" /> Авторизация
-            </Button>
-          </Link>
-        </Nav.Item>
-        
-        {/* Иконка и кнопка для Регистрации */}
-        <Nav.Item>
-          <Link to="/register">
-            <Button variant="outline-light" className="mr-2">
-              <FaUserPlus className="mr-2" /> Регистрация
-            </Button>
-          </Link>
-        </Nav.Item>
-        
-        {/* Иконка и кнопка для Меню */}
-        <Nav.Item>
-          <Link to="/menu">
-            <Button variant="outline-light">
-              <FaHamburger className="mr-2" /> Меню
-            </Button>
-          </Link>
-        </Nav.Item>
-      </Nav>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Item>
+              <Nav.Link as={Link} to="/admin" className="animated-link">Админка</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/login" className="animated-link">Авторизация</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/register" className="animated-link">Регистрация</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/menu" className="animated-link">Меню</Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 }
