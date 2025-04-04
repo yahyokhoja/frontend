@@ -1,0 +1,21 @@
+/* Основная структура */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Контент занимает всё доступное пространство */
+  .content {
+    flex: 1;
+  }
+  
+  /* Футер всегда внизу */
+  .footer {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+  }
+  

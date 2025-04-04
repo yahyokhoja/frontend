@@ -1,33 +1,24 @@
-import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Container, Button } from "react-bootstrap";
+import "../styles/Home.css"; // Подключаем стили
 
 function Home() {
   return (
-    <Container className="text-center mt-5">
+    <Container className="home-container">
       <h1>Добро пожаловать в систему доставки еды!</h1>
-      <Row className="mt-4">
-        <Col md={6} lg={3} className="mb-3">
-          <Link to="/admin">
-            <Button variant="primary" className="w-100">Админка</Button>
-          </Link>
-        </Col>
-        <Col md={6} lg={3} className="mb-3">
-          <Link to="/login">
-            <Button variant="success" className="w-100">Авторизация</Button>
-          </Link>
-        </Col>
-        <Col md={6} lg={3} className="mb-3">
-          <Link to="/register">
-            <Button variant="warning" className="w-100">Регистрация</Button>
-          </Link>
-        </Col>
-        <Col md={6} lg={3} className="mb-3">
-          <Link to="/menu">
-            <Button variant="danger" className="w-100">Меню</Button>
-          </Link>
-        </Col>
-      </Row>
+
+      <div className="home-buttons mt-4">
+        <Link to="/menu">
+          <Button variant="primary" className="home-button">Меню</Button>
+        </Link>
+        <Link to="/login">
+          <Button variant="success" className="home-button">Авторизация</Button>
+        </Link>
+        <Link to="/register">
+          <Button variant="warning" className="home-button">Регистрация</Button>
+        </Link>
+      </div>
     </Container>
   );
 }
