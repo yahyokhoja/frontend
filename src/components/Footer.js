@@ -14,7 +14,7 @@ function Footer() {
   textDecoration: 'none',
   display: 'inline-block'
 }}>
-  📞 Тех отдел: +992 929281129
+  📞 Тех отдел:
 </a>
 
         <a href="https://t.me/твой-тг" target="_blank" rel="noopener noreferrer">
