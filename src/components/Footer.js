@@ -6,7 +6,7 @@ function Footer() {
     <footer className="footer">
       <p>© 2025 </p>
       <div>
-      <a href="tel:+998901234567" style={{
+      <a href="tel:+992929281129" style={{
   backgroundColor: '#28a745',
   color: 'white',
   padding: '10px 20px',
