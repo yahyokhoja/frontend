@@ -1,31 +1,43 @@
 .home-container {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* Отступы между кнопками */
+  max-width: 400px; /* Ограничиваем ширину контейнера */
+}
+
+.home-button {
+  flex: 1 1 200px; /* Кнопки адаптируются по ширине */
+  max-width: 200px; /* Ограничиваем ширину кнопки */
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 8px; /* Округлость кнопок */
+  transition: transform 0.2s ease, background-color 0.3s ease; /* Анимация для кнопок */
+}
+
+.home-button:hover {
+  transform: scale(1.05); /* Легкое увеличение кнопки при наведении */
+  background-color: #007bff; /* Изменение фона кнопки при наведении */
+  color: white; /* Цвет текста при наведении */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .home-button {
+    font-size: 1rem;
+    padding: 8px;
   }
   
   .home-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Отступы между кнопками */
-    max-width: 400px; /* Ограничиваем ширину контейнера */
+    max-width: 100%;
   }
-  
-  .home-button {
-    flex: 1 1 200px; /* Кнопки адаптируются по ширине */
-    max-width: 200px; /* Ограничиваем ширину кнопки */
-    font-size: 1.2rem;
-    padding: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .home-button {
-      font-size: 1rem;
-      padding: 8px;
-    }
-  }
-  
+}
