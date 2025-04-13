@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Container, Carousel, Row, Col, Card, Button } from "react-bootstrap";
+import {
+  Container,
+  Carousel,
+  Row,
+  Col,
+  Card,
+  Button,
+} from "react-bootstrap";
 import axios from "axios";
 import "../styles/Home.css";
 
@@ -7,7 +14,8 @@ function Home() {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    axios.get("https://yahuokhoja.pythonanywhere.com/food/api/foods/")
+    axios
+      .get("https://yahuokhoja.pythonanywhere.com/food/api/foods/")
       .then((res) => setFoods(res.data))
       .catch((err) => console.error("Ошибка при загрузке еды:", err));
   }, []);
@@ -32,9 +40,9 @@ function Home() {
 
   return (
     <Container className="home-container">
-      <h1 className="mt-4">Добро пожаловать в систему доставки еды!</h1>
+      <h1 className="mt-4 text-center">Добро пожаловать в систему доставки!</h1>
 
-      {/* Слайдер с шашлыками */}
+      {/* Главный слайдер еды */}
       <Carousel className="my-4">
         {slides.map((slide, index) => (
           <Carousel.Item key={index}>
@@ -42,18 +50,18 @@ function Home() {
               className="d-block w-100"
               src={slide.image}
               alt={slide.title}
-              style={{ height: "400px", width: "100%", objectFit: "cover" }} // Все изображения будут одинаковыми по размеру
+              style={{ height: "250px", objectFit: "cover" }}
             />
             <Carousel.Caption>
-              <h3>{slide.title}</h3>
+              <h4>{slide.title}</h4>
               <p>{slide.description}</p>
             </Carousel.Caption>
           </Carousel.Item>
         ))}
       </Carousel>
 
-      {/* Список еды */}
-      <h2 className="mt-5 mb-3">Популярные блюда</h2>
+      {/* Популярные товары */}
+      <h2 className="mt-5 mb-3">Популярные товары</h2>
       <Row>
         {foods.map((food) => (
           <Col md={4} key={food.id} className="mb-4">
@@ -61,7 +69,7 @@ function Home() {
               <Card.Img
                 variant="top"
                 src={food.image || "https://via.placeholder.com/400x300?text=Еда"}
-                style={{ height: "300px", objectFit: "cover" }} // Устанавливаем одинаковый размер для картинок
+                style={{ height: "250px", objectFit: "cover" }}
               />
               <Card.Body>
                 <Card.Title>{food.name}</Card.Title>

@@ -1,40 +1,103 @@
 /* Стили для иконки главной страницы */
 .home-icon {
-    font-size: 1.8rem;
-    color: white;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  .home-icon:hover {
-    transform: scale(1.2);
-    color: #f8b400;
-  }
-  
-  /* Стили для анимации ссылок */
-  .animated-link {
-    color: white !important;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  .animated-link:hover {
-    color: #f8b400 !important;
-  }
-  
-  /* Подчеркивание при наведении */
-  .animated-link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #f8b400;
-    transition: width 0.3s ease;
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-  }
-  
-  .animated-link:hover::after {
+  font-size: 1.8rem;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.home-icon:hover {
+  transform: scale(1.2);
+  color: #f8b400;
+}
+
+/* Стили для анимации ссылок */
+.animated-link {
+  color: white !important;
+  position: relative;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.animated-link:hover {
+  color: #f8b400 !important;
+}
+
+.animated-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f8b400;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+}
+
+.animated-link:hover::after {
+  width: 100%;
+}
+
+/* Стили мега-меню */
+.mega-dropdown .dropdown-menu.mega-menu {
+  width: 700px;
+  background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+  color: white;
+  border-radius: 12px;
+  border: none;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.mega-dropdown .dropdown-menu a {
+  color: #ddd;
+  padding: 0.35rem 0;
+  display: block;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+}
+
+.mega-dropdown .dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #f8b400;
+  border-radius: 6px;
+  padding-left: 0.5rem;
+}
+
+.mega-dropdown .dropdown-toggle::after {
+  margin-left: 0.5em;
+}
+
+/* Заголовки блоков в мега-меню */
+.mega-menu h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #f8b400;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+/* Отступы между блоками */
+.mega-menu .p-3 {
+  min-width: 180px;
+}
+
+/* Для мобильных: не даём мега-меню развалиться */
+@media (max-width: 768px) {
+  .mega-dropdown .dropdown-menu.mega-menu {
     width: 100%;
+    padding: 1rem;
   }
-  
+
+  .mega-menu .d-flex {
+    flex-direction: column;
+  }
+
+  .mega-menu .p-3 {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}

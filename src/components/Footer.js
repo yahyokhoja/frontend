@@ -14,7 +14,7 @@ function Footer() {
   textDecoration: 'none',
   display: 'inline-block'
 }}>
-  📞 Тех отдел:
+  📞 yasan:
 </a>
 
         <a href="https://t.me/твой-тг" target="_blank" rel="noopener noreferrer">

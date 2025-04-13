@@ -41,3 +41,20 @@
     max-width: 100%;
   }
 }
+
+
+.category-links {
+  font-size: 1.1rem;
+}
+
+.category-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.category-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}

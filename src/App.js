@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./styles/App.css"; // Подключаем стили
 
+import VideoPage from './pages/VideoPage'; // Импортируем компонент видеокамеры
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/video" component={VideoPage} /> {/* Страница видеокамеры */}
           </Routes>
         </div>
         <Footer />
