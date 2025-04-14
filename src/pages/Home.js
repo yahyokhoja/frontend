@@ -40,7 +40,7 @@ function Home() {
 
   return (
     <Container className="home-container">
-      <h1 className="mt-4 text-center">Добро пожаловать в систему доставки!</h1>
+      <h1 className="mt-4 text-center">Добро пожаловать в систему Доставки!</h1>
 
       {/* Главный слайдер еды */}
       <Carousel className="my-4">
